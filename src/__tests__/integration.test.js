@@ -1,9 +1,9 @@
 const request = require('supertest')
 const app = require('../app')
 const { default: Redis } = require("ioredis");
-const res = require('express/lib/response');
 
-const redis = new Redis()
+require("dotenv").config()
+const redis = new Redis(process.env.REDIS_PORT, process.env.REDIS_HOST)
 describe("testing inbound routes", () => {
     let username = "azr2"
     let password = "54P2EOKQ47"

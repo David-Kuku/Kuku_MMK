@@ -2,7 +2,7 @@ const { default: Redis } = require("ioredis");
 const ServerResponse = require("../utils/serverResponse");
 const getPhoneNumber = require("./getPhoneNumber");
 
-const redis = new Redis();
+const redis = new Redis(process.env.REDIS_PORT, process.env.REDIS_HOST)
 const outboundService = async (value) => {
  
     const search_result = await getPhoneNumber(value.from)
@@ -20,7 +20,6 @@ const outboundService = async (value) => {
             const reqCount = await redis.get(value.from)
             let requestCount = parseInt(reqCount)
             
-            console.log(requestCount)
             if (requestCount > 50) {
                 // set limit to 50 (if no of count reaches 50, the limit error should be thrown)
                 const res = ServerResponse(400, "", `limit reached for from ${value.from}`)
