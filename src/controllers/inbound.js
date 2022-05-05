@@ -11,6 +11,7 @@ const inboundController = async (req, res) => {
         res.status(result.status).send(result.response)
     }
     catch (err) {
+        console.log({err})
         const result = errorCatch(err)
         res.status(result.status).send(result.response)
 

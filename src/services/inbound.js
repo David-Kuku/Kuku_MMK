@@ -1,14 +1,15 @@
 const PhoneNumber = require("../models/PhoneNumber")
 const Redis = require("ioredis")
 const ServerResponse = require("../utils/serverResponse")
+const getPhoneNumber = require("./getPhoneNumber")
 
 const redis = new Redis()
 
 const inboundService = async (value) => {
-    const number = await PhoneNumber.findOne({
-        where: { number: value.to }
-    })
+    const number = await getPhoneNumber(value.to)
     if (number) {
+        console.log({value})
+        console.log("trim:", value.text.trim())
         if (value.text.trim() === "STOP") {
             // set it in redis and set expiry to 4hrs
             redis.set(`${value.from}-${value.to}`, value.to, 'ex', 14400)

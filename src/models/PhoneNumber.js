@@ -1,7 +1,6 @@
 const { DataTypes } = require('sequelize')
 const sequelize = require('../sequelize')
 
-
 const PhoneNumber = sequelize.define('phoneNumber', {
     id: {
         type: DataTypes.INTEGER,
