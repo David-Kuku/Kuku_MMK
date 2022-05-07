@@ -8,7 +8,7 @@
 ## 1. Database
 - Create a PostgreSQL database locally. This will be used to store the application's metadata.<br/>
 
-- After creating the database, run the following command to copy the dump onto the database. <br/>
+- After creating the database, copy the dump onto the it, you can go through this documentation https://www.postgresql.org/docs/current/backup-dump.html. <br/>
 
 - After that, then you can set your environment variables as specified in the env.example.<br/>
 
