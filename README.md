@@ -23,5 +23,12 @@
 - To start the server, run the command: <br/>
     npm run dev<br/>
     
-- Base Url: http://localhost:3000/. This can be accessed in your web browser. A JSON with status of UP {"status":"Active"} will be displayed
+- Base Url: http://localhost:3000/. This can be accessed in your web browser. A JSON {"status":"Active"} will be displayed
+
+## 4. Testing
+- To run tests, run the command: <br/>
+    npm run test <br/>
+    
+## 5. Deployment
+- A live version of the code is hosted on Heroku and is available at https://kuku-mmk.herokuapp.com/
 
