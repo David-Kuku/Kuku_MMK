@@ -29,6 +29,7 @@
 - To start the server, run the command: <br/>
     
     npm run dev<br/>
+    
     To test the APIs, feel free to play around with it here https://documenter.getpostman.com/view/10937826/UyxdKUeR
     
 - Base Url: http://localhost:3000/. This can be accessed in your web browser. A JSON {"status":"Active"} will be displayed
