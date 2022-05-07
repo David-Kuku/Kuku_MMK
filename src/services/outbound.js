@@ -20,7 +20,7 @@ const outboundService = async (value) => {
             const reqCount = await redis.get(value.from)
             let requestCount = parseInt(reqCount)
             
-            if (requestCount > 50) {
+            if (requestCount >= 50) {
                 // set limit to 50 (if no of count reaches 50, the limit error should be thrown)
                 const res = ServerResponse(400, "", `limit reached for from ${value.from}`)
                 return res
