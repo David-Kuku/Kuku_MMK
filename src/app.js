@@ -18,7 +18,7 @@ app.use(inboundRouter)
 app.use(outboundRouter)
 
 app.all('/*', (req, res) => {
-    res.status(405).send()
+    res.status(405).send({"status": "Active"})
 })
 
 module.exports = app
