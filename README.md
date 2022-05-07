@@ -8,6 +8,7 @@
 ## 1. Database
 - Create a PostgreSQL database locally. This will be used to store the application's metadata.<br/>
 - After creating the database, run the following command to copy the dump onto the database. <br/>
+<!-- - -->
 - After that, then you can set your environment variables as specified in the env.example.<br/>
 
 ## 2. Redis
