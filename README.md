@@ -1,4 +1,4 @@
-### Kuku_MMK
+### sms app
 
 ## Requirements
 - To run this code, the Node Package Manager (NPM) is required. You will need to download and install Node from https://nodejs.com/en/download. You will be able to run     npm commands with this.<br/>
